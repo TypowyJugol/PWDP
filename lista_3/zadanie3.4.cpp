@@ -7,10 +7,9 @@ int main()
 	while(x==0){
 		cout<<"Podaj rodzaj dzialania: 1-dodawanie, 2-mnozenie: ";
 		cin>>dzialanie;
-		if(dzialanie==0)
+		if(dzialanie==1)
 		{
-			cout<<"To nie jest liczba"<<endl;
-			break;
+			cout<<"Wybrano dodawanie"<<endl;
 		}
 		else if(dzialanie==2)
 		{
@@ -18,7 +17,8 @@ int main()
 		}
 		else
 		{
-			cout<<"Wybrano dodawanie"<<endl;
+			cout<<"To nie jest liczba 1 lub 2"<<endl;
+			break;
 		}
 		
 		cout<<"Podaj pierwszą liczbę: ";
