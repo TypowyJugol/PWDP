@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 int losowa,koniec,liczba,proba=1;
 int main(){

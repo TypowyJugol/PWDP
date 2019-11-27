@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int Hello(){
+void Hello(){
     cout<<"Hello World!"<<endl;
 }
 float druga(float a){
@@ -9,17 +9,17 @@ float druga(float a){
 
 }
 int trzecia(int x, int y){
-    cout<<x*y<<endl;
+    cout<<x+y<<endl;
 }
 int czwarta(int x, float y, float z){
-    cout<<x*y*z<<endl;
+    return x*y*z;
 }
 int piata(int tablica[], int rozmiar){
     int iloczyn=1,i;
     for(i=0;i<rozmiar;i++){
         iloczyn*=tablica[i];
     }
-    cout<<iloczyn<<endl;
+    return iloczyn;
 }
 int main(){
     int tablica[5]={1,2,3,4,5};

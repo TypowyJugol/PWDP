@@ -23,5 +23,9 @@ int main()
 	cout<<"Podaj wyrazu ciągu: ";
 	cin>>n;
 	cout<<"Podany wyraz ciągu ma wartość "<<fib(n)<<endl;
+    for (n=1;n<10;n++)
+    {
+        cout<<n<<"  "<<fib(n);
+    }
 	return 0;
 }

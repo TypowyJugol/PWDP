@@ -26,6 +26,6 @@ int main()
         }
         tura++;
     }
-    if ()
+    for ()
     return 0;
 }
