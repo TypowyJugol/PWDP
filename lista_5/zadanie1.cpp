@@ -4,56 +4,234 @@
 #include <ctime>
 
 using namespace std;
+void krzyzk_pozycja(int z)
+{
+    if (z == 1)
+    {
+        cout << "\x1b[11;7H";
+        cout << "\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B";
+        cout << "\x1b[18;7H";
+        cout << "\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A";
+        cout << "\x1b[32E";
+    }
+    if (z == 2)
+    {
+        cout << "\x1b[11;27H";
+        cout << "\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B";
+        cout << "\x1b[18;27H";
+        cout << "\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A";
+        cout << "\x1b[32E";
+    }
+    if (z == 3)
+    {
+        cout << "\x1b[11;47H";
+        cout << "\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B";
+        cout << "\x1b[18;47H";
+        cout << "\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A";
+        cout << "\x1b[32E";
+    }
+    if (z == 4)
+    {
+        cout << "\x1b[22;7H";
+        cout << "\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B";
+        cout << "\x1b[29;7H";
+        cout << "\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A";
+        cout << "\x1b[21E";
+    }
+    if (z == 5)
+    {
+        cout << "\x1b[22;27H";
+        cout << "\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B";
+        cout << "\x1b[29;27H";
+        cout << "\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A";
+        cout << "\x1b[21E";
+    }
+    if (z == 6)
+    {
+        cout << "\x1b[22;47H";
+        cout << "\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B";
+        cout << "\x1b[29;47H";
+        cout << "\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A";
+        cout << "\x1b[21E";
+    }
+    if (z == 7)
+    {
+        cout << "\x1b[33;7H";
+        cout << "\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B";
+        cout << "\x1b[40;7H";
+        cout << "\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A";
+        cout << "\x1b[10E";
+    }
+    if (z == 8)
+    {
+        cout << "\x1b[33;27H";
+        cout << "\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B";
+        cout << "\x1b[40;27H";
+        cout << "\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A";
+        cout << "\x1b[10E";
+    }
+    if (z == 9)
+    {
+        cout << "\x1b[33;47H";
+        cout << "\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B";
+        cout << "\x1b[40;47H";
+        cout << "\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A";
+        cout << "\x1b[10E";
+    }
+}
+
+void kolko_pozycja(int z)
+{
+    if (z == 1)
+    {
+        cout << "\x1b[11;10H";
+        cout << "\x1b[107m     \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[1D\x1b[107m \x1b[0m\x1b[1B\x1b[1D\x1b[107m \x1b[0m\x1b[1B\x1b[1D\x1b[107m \x1b[0m\x1b[1B\x1b[2D\x1b[107m \x1b[0m\x1b[1B\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[1A\x1b[2D\x1b[107m \x1b[0m\x1b[1A\x1b[2D\x1b[107m \x1b[0m\x1b[1A\x1b[1D\x1b[107m \x1b[0m\x1b[1A\x1b[1D\x1b[107m \x1b[0m\x1b[1A\x1b[1D\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m    \x1b[0m";
+        cout << "\x1b[32E";
+    }
+    if (z == 2)
+    {
+        cout << "\x1b[11;30H";
+        cout << "\x1b[107m     \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[1D\x1b[107m \x1b[0m\x1b[1B\x1b[1D\x1b[107m \x1b[0m\x1b[1B\x1b[1D\x1b[107m \x1b[0m\x1b[1B\x1b[2D\x1b[107m \x1b[0m\x1b[1B\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[1A\x1b[2D\x1b[107m \x1b[0m\x1b[1A\x1b[2D\x1b[107m \x1b[0m\x1b[1A\x1b[1D\x1b[107m \x1b[0m\x1b[1A\x1b[1D\x1b[107m \x1b[0m\x1b[1A\x1b[1D\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m    \x1b[0m";
+        cout << "\x1b[32E";
+    }
+    if (z == 3)
+    {
+        cout << "\x1b[11;50H";
+        cout << "\x1b[107m     \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[1D\x1b[107m \x1b[0m\x1b[1B\x1b[1D\x1b[107m \x1b[0m\x1b[1B\x1b[1D\x1b[107m \x1b[0m\x1b[1B\x1b[2D\x1b[107m \x1b[0m\x1b[1B\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[1A\x1b[2D\x1b[107m \x1b[0m\x1b[1A\x1b[2D\x1b[107m \x1b[0m\x1b[1A\x1b[1D\x1b[107m \x1b[0m\x1b[1A\x1b[1D\x1b[107m \x1b[0m\x1b[1A\x1b[1D\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m    \x1b[0m";
+        cout << "\x1b[32E";
+    }
+    if (z == 4)
+    {
+        cout << "\x1b[22;10H";
+        cout << "\x1b[107m     \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[1D\x1b[107m \x1b[0m\x1b[1B\x1b[1D\x1b[107m \x1b[0m\x1b[1B\x1b[1D\x1b[107m \x1b[0m\x1b[1B\x1b[2D\x1b[107m \x1b[0m\x1b[1B\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[1A\x1b[2D\x1b[107m \x1b[0m\x1b[1A\x1b[2D\x1b[107m \x1b[0m\x1b[1A\x1b[1D\x1b[107m \x1b[0m\x1b[1A\x1b[1D\x1b[107m \x1b[0m\x1b[1A\x1b[1D\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m    \x1b[0m";
+        cout << "\x1b[32E";
+    }
+    if (z == 5)
+    {
+        cout << "\x1b[22;30H";
+        cout << "\x1b[107m     \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[1D\x1b[107m \x1b[0m\x1b[1B\x1b[1D\x1b[107m \x1b[0m\x1b[1B\x1b[1D\x1b[107m \x1b[0m\x1b[1B\x1b[2D\x1b[107m \x1b[0m\x1b[1B\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[1A\x1b[2D\x1b[107m \x1b[0m\x1b[1A\x1b[2D\x1b[107m \x1b[0m\x1b[1A\x1b[1D\x1b[107m \x1b[0m\x1b[1A\x1b[1D\x1b[107m \x1b[0m\x1b[1A\x1b[1D\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m    \x1b[0m";
+        cout << "\x1b[32E";
+    }
+    if (z == 6)
+    {
+        cout << "\x1b[22;50H";
+        cout << "\x1b[107m     \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[1D\x1b[107m \x1b[0m\x1b[1B\x1b[1D\x1b[107m \x1b[0m\x1b[1B\x1b[1D\x1b[107m \x1b[0m\x1b[1B\x1b[2D\x1b[107m \x1b[0m\x1b[1B\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[1A\x1b[2D\x1b[107m \x1b[0m\x1b[1A\x1b[2D\x1b[107m \x1b[0m\x1b[1A\x1b[1D\x1b[107m \x1b[0m\x1b[1A\x1b[1D\x1b[107m \x1b[0m\x1b[1A\x1b[1D\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m    \x1b[0m";
+        cout << "\x1b[32E";
+    }
+    if (z == 7)
+    {
+        cout << "\x1b[33;10H";
+        cout << "\x1b[107m     \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[1D\x1b[107m \x1b[0m\x1b[1B\x1b[1D\x1b[107m \x1b[0m\x1b[1B\x1b[1D\x1b[107m \x1b[0m\x1b[1B\x1b[2D\x1b[107m \x1b[0m\x1b[1B\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[1A\x1b[2D\x1b[107m \x1b[0m\x1b[1A\x1b[2D\x1b[107m \x1b[0m\x1b[1A\x1b[1D\x1b[107m \x1b[0m\x1b[1A\x1b[1D\x1b[107m \x1b[0m\x1b[1A\x1b[1D\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m    \x1b[0m";
+        cout << "\x1b[32E";
+    }
+    if (z == 8)
+    {
+        cout << "\x1b[33;30H";
+        cout << "\x1b[107m     \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[1D\x1b[107m \x1b[0m\x1b[1B\x1b[1D\x1b[107m \x1b[0m\x1b[1B\x1b[1D\x1b[107m \x1b[0m\x1b[1B\x1b[2D\x1b[107m \x1b[0m\x1b[1B\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[1A\x1b[2D\x1b[107m \x1b[0m\x1b[1A\x1b[2D\x1b[107m \x1b[0m\x1b[1A\x1b[1D\x1b[107m \x1b[0m\x1b[1A\x1b[1D\x1b[107m \x1b[0m\x1b[1A\x1b[1D\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m    \x1b[0m";
+        cout << "\x1b[32E";
+    }
+    if (z == 9)
+    {
+        cout << "\x1b[33;50H";
+        cout << "\x1b[107m     \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[107m \x1b[0m\x1b[1B\x1b[1D\x1b[107m \x1b[0m\x1b[1B\x1b[1D\x1b[107m \x1b[0m\x1b[1B\x1b[1D\x1b[107m \x1b[0m\x1b[1B\x1b[2D\x1b[107m \x1b[0m\x1b[1B\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[2D\x1b[107m \x1b[0m\x1b[1A\x1b[2D\x1b[107m \x1b[0m\x1b[1A\x1b[2D\x1b[107m \x1b[0m\x1b[1A\x1b[1D\x1b[107m \x1b[0m\x1b[1A\x1b[1D\x1b[107m \x1b[0m\x1b[1A\x1b[1D\x1b[107m \x1b[0m\x1b[1A\x1b[107m \x1b[0m\x1b[1A\x1b[107m    \x1b[0m";
+        cout << "\x1b[32E";
+    }
+}
+
 int main()
 {
+    cout << "\x1b[1J";
     srand(time(NULL));
-    int tura = 1, gracz, tabkolko[3], tabkrzyzyk[3], losuj=true, ikol = 0, ikrz=0, n = 0, ktowygral, x, 
+    int tura = 1, gracz, tabkolko[3], tabkrzyzyk[3], losuj = true, ikol = 0, ikrz = 0, n = 0, ktowygral, x, poprawna = true,
 
-              wygrana[8][3] = {{1, 2, 3},
-                               {4, 5, 6},
-                               {7, 8, 9},
-                               {1, 4, 7},
-                               {2, 5, 8},
-                               {3, 6, 9},
-                               {1, 5, 9},
-                               {3, 5, 7}};
+        wygrana[8][3] = {{1, 2, 3},
+                         {4, 5, 6},
+                         {7, 8, 9},
+                         {1, 4, 7},
+                         {2, 5, 8},
+                         {3, 6, 9},
+                         {1, 5, 9},
+                         {3, 5, 7}};
+    tabkolko[0]=0;
 
-    cout<<"\x1b[48;2;0;102;0m   *   *  ******  *        *   *  ******      *      *   *  ******  *     *  *******  *     *  *   *         \x1b[0m"<<endl;
-    cout<<"\x1b[48;2;0;102;0m   *  *   *    *  *        *  *   *    *      *      *  *   *    *   *   *        *    *   *   *  *          \x1b[0m"<<endl;
-    cout<<"\x1b[48;2;0;102;0m   * *    *    *  *        * *    *    *      *      * *    *    *    * *        *      * *    * *           \x1b[0m"<<endl;
-    cout<<"\x1b[48;2;0;102;0m   **     *    *  *        **     *    *      *      **     ******     *        *        *     **            \x1b[0m"<<endl;
-    cout<<"\x1b[48;2;0;102;0m   * *    *    *  *        * *    *    *      *      * *    * *        *       *         *     * *           \x1b[0m"<<endl;
-    cout<<"\x1b[48;2;0;102;0m   *  *   *    *  *        *  *   *    *      *      *  *   *  *       *      *          *     *  *          \x1b[0m"<<endl;
-    cout<<"\x1b[48;2;0;102;0m   *   *  ******  *******  *   *  ******      *      *   *  *   *      *     *******     *     *   *         \x1b[0m"<<endl;
+    cout << "\x1b[48;2;0;102;0m   *   *  ******  *        *   *  ******      *      *   *  ******  *******  *     *  *******  *     *  *   *   \x1b[0m" << endl;
+    cout << "\x1b[48;2;0;102;0m   *  *   *    *  *        *  *   *    *      *      *  *   *    *       *    *   *        *    *   *   *  *    \x1b[0m" << endl;
+    cout << "\x1b[48;2;0;102;0m   * *    *    *  *        * *    *    *      *      * *    *    *      *      * *        *      * *    * *     \x1b[0m" << endl;
+    cout << "\x1b[48;2;0;102;0m   **     *    *  *        **     *    *      *      **     ******     *        *        *        *     **      \x1b[0m" << endl;
+    cout << "\x1b[48;2;0;102;0m   * *    *    *  *        * *    *    *      *      * *    * *       *         *       *         *     * *     \x1b[0m" << endl;
+    cout << "\x1b[48;2;0;102;0m   *  *   *    *  *        *  *   *    *      *      *  *   *  *     *          *      *          *     *  *    \x1b[0m" << endl;
+    cout << "\x1b[48;2;0;102;0m   *   *  ******  *******  *   *  ******      *      *   *  *   *   *******     *     *******     *     *   *   \x1b[0m" << endl;
 
-    cout << "Witaj w grze w kółko i krzyżyk" << endl;
+    cout << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "\x1b[107m                                                            \x1b[0m" << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "\x1b[107m                                                            \x1b[0m" << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+
     while (tura < 7)
     {
         if (gracz == 1)
         {
-            cout << "Teraz kolej gracza 'kółko'" << endl;
-            cout << "Podaj pole na którym chcesz umieścić znak" << endl;
-            cout << "Pamiętaj, że możesz to zrobić tylko na wolnym polu: ";
-            cin >> tabkolko[ikol];
-            cout << endl;
+            while (poprawna == true)
+            {
+                cout << "Podaj pole na którym chcesz umieścić znak: ";
+                cin >> x;
+                cout << "\x1b[1A\x1b[2K";
+                if (x != tabkolko[0] && x != tabkolko[1] && x != tabkolko[2] && x != tabkrzyzyk[0] && x != tabkrzyzyk[1] && x != tabkrzyzyk[2])
+                {
+                    tabkolko[ikol] = x;
+                    kolko_pozycja(tabkolko[ikol]);
+                    cout << "\x1b[2K";
+                    ikol++;
+                    poprawna = false;
+                }
+                
+            }
+            poprawna = true;
             gracz = 0;
-            ikol++;
         }
         else
         {
-            cout << "Teraz kolej gracza 'krzyżyk'" << endl;
-            while (losuj==true)
+            while (poprawna == true)
             {
                 x = (rand() % 9) + 1;
                 if (x != tabkolko[0] && x != tabkolko[1] && x != tabkolko[2] && x != tabkrzyzyk[0] && x != tabkrzyzyk[1] && x != tabkrzyzyk[2])
                 {
-                    cout << "Gracz 'krzyżyk' postawił znak na polu:"<<x<<endl;
                     tabkrzyzyk[ikrz] = x;
-                    losuj=false;
+                    poprawna = false;
                     ikrz++;
+                    krzyzk_pozycja(x);
                 }
             }
-            losuj=true;
+            poprawna = true;
             gracz = 1;
         }
         tura++;
@@ -106,14 +284,17 @@ int main()
 
     if (ktowygral == 1)
     {
+        cout << "\x1b[43;1H";
         cout << "Wygrał 'kółko'" << endl;
     }
     else if (ktowygral == 2)
     {
+        cout << "\x1b[43;1H";
         cout << "wygrał 'krzyżyk'" << endl;
     }
     else
     {
+        cout << "\x1b[43;1H";
         cout << "Nikt nie wygrał" << endl;
     }
 
