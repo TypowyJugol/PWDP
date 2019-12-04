@@ -140,19 +140,11 @@ void kolko_pozycja(int z)
 
 int main()
 {
-    cout << "\x1b[1J";
+    bool gra=true;
+    while(gra==true){
+    cout << "\x1b[0J";
+    cout << "\x1b[2;1H";
     srand(time(NULL));
-    int tura = 1, gracz, tabkolko[3], tabkrzyzyk[3], losuj = true, ikol = 0, ikrz = 0, n = 0, ktowygral, x, poprawna = true,
-
-        wygrana[8][3] = {{1, 2, 3},
-                         {4, 5, 6},
-                         {7, 8, 9},
-                         {1, 4, 7},
-                         {2, 5, 8},
-                         {3, 6, 9},
-                         {1, 5, 9},
-                         {3, 5, 7}};
-    tabkolko[0]=0;
 
     cout << "\x1b[48;2;0;102;0m   *   *  ******  *        *   *  ******      *      *   *  ******  *******  *     *  *******  *     *  *   *   \x1b[0m" << endl;
     cout << "\x1b[48;2;0;102;0m   *  *   *    *  *        *  *   *    *      *      *  *   *    *       *    *   *        *    *   *   *  *    \x1b[0m" << endl;
@@ -195,6 +187,18 @@ int main()
     cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
     cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
     cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+
+    int tura = 1, gracz, tabkolko[3], tabkrzyzyk[3], ikol = 0, ikrz = 0, n = 0, ktowygral, x, poprawna = true,
+
+        wygrana[8][3] = {{1, 2, 3},
+                         {4, 5, 6},
+                         {7, 8, 9},
+                         {1, 4, 7},
+                         {2, 5, 8},
+                         {3, 6, 9},
+                         {1, 5, 9},
+                         {3, 5, 7}};
+    tabkolko[0]=0;
 
     while (tura < 7)
     {
@@ -295,7 +299,16 @@ int main()
     else
     {
         cout << "\x1b[43;1H";
-        cout << "Nikt nie wygrał" << endl;
+        cout << "Remis" << endl;
+    }
+    cout<<"Chcesz zagrać jeszcze raz(1-Tak, 0-Nie)?"<<endl;
+    cin>>x;
+    if(x==1){
+        gra=true;
+    }
+    else{
+        gra=false;
+    }
     }
 
     return 0;
