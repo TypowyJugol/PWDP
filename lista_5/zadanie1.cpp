@@ -142,9 +142,49 @@ int main()
 {
     bool gra=true;
     while(gra==true){
-    cout << "\x1b[0J";
     cout << "\x1b[2;1H";
+    cout << "\x1b[0J";
     srand(time(NULL));
+
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "          *         \x1b[107m \x1b[0m       *****      \x1b[107m \x1b[0m      *******       " << endl;
+    cout << "         **         \x1b[107m \x1b[0m      *     *     \x1b[107m \x1b[0m             *      " << endl;
+    cout << "        * *         \x1b[107m \x1b[0m            *     \x1b[107m \x1b[0m             *      " << endl;
+    cout << "       *  *         \x1b[107m \x1b[0m           *      \x1b[107m \x1b[0m      *******       " << endl;
+    cout << "          *         \x1b[107m \x1b[0m          *       \x1b[107m \x1b[0m             *      " << endl;
+    cout << "          *         \x1b[107m \x1b[0m        *         \x1b[107m \x1b[0m             *      " << endl;
+    cout << "          *         \x1b[107m \x1b[0m       *          \x1b[107m \x1b[0m             *      " << endl;
+    cout << "          *         \x1b[107m \x1b[0m      *******     \x1b[107m \x1b[0m      *******        " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "\x1b[107m                                                            \x1b[0m" << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "        *   *       \x1b[107m \x1b[0m     ********     \x1b[107m \x1b[0m       ********     " << endl;
+    cout << "       *    *       \x1b[107m \x1b[0m     *            \x1b[107m \x1b[0m      *             " << endl;
+    cout << "      *     *       \x1b[107m \x1b[0m     *            \x1b[107m \x1b[0m      *             " << endl;
+    cout << "     *      *       \x1b[107m \x1b[0m     *******      \x1b[107m \x1b[0m      ********      " << endl;
+    cout << "    *********       \x1b[107m \x1b[0m            *     \x1b[107m \x1b[0m      *       *     " << endl;
+    cout << "            *       \x1b[107m \x1b[0m            *     \x1b[107m \x1b[0m      *       *     " << endl;
+    cout << "            *       \x1b[107m \x1b[0m            *     \x1b[107m \x1b[0m      *       *     " << endl;
+    cout << "            *       \x1b[107m \x1b[0m    ********      \x1b[107m \x1b[0m       *******      " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "\x1b[107m                                                            \x1b[0m" << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    cout << "     *********      \x1b[107m \x1b[0m      ******      \x1b[107m \x1b[0m       *******      " << endl;
+    cout << "            *       \x1b[107m \x1b[0m     *      *     \x1b[107m \x1b[0m      *       *     " << endl;
+    cout << "           *        \x1b[107m \x1b[0m     *      *     \x1b[107m \x1b[0m      *       *     " << endl;
+    cout << "          *         \x1b[107m \x1b[0m      ******      \x1b[107m \x1b[0m       ********     " << endl;
+    cout << "      *******       \x1b[107m \x1b[0m     *      *     \x1b[107m \x1b[0m              *     " << endl;
+    cout << "        *           \x1b[107m \x1b[0m     *      *     \x1b[107m \x1b[0m              *     " << endl;
+    cout << "       *            \x1b[107m \x1b[0m     *      *     \x1b[107m \x1b[0m              *     " << endl;
+    cout << "      *             \x1b[107m \x1b[0m      ******      \x1b[107m \x1b[0m      ********      " << endl;
+    cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
+    
+    cout<<"Wybierając od 1-9 będziesz stawiał znak na podanych polach"<<endl;
+    cout<<"Aby przejść dalej wpisz dowolną liczbę: ";
+    int dalej;
+    cin>>dalej;
+    cout<<"\x1b[2;1H";
+    cout<<"\x1b[0J";
 
     cout << "\x1b[48;2;0;102;0m   *   *  ******  *        *   *  ******      *      *   *  ******  *******  *     *  *******  *     *  *   *   \x1b[0m" << endl;
     cout << "\x1b[48;2;0;102;0m   *  *   *    *  *        *  *   *    *      *      *  *   *    *       *    *   *        *    *   *   *  *    \x1b[0m" << endl;
@@ -188,7 +228,7 @@ int main()
     cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
     cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
 
-    int tura = 1, gracz, tabkolko[3], tabkrzyzyk[3], ikol = 0, ikrz = 0, n = 0, ktowygral, x, poprawna = true,
+    int tura = 1, gracz, tabkolko[3]={0,0,0}, tabkrzyzyk[3]={0,0,0}, ikol = 0, ikrz = 0, n = 0, ktowygral, x, poprawna = true,
 
         wygrana[8][3] = {{1, 2, 3},
                          {4, 5, 6},
@@ -198,7 +238,6 @@ int main()
                          {3, 6, 9},
                          {1, 5, 9},
                          {3, 5, 7}};
-    tabkolko[0]=0;
 
     while (tura < 7)
     {
