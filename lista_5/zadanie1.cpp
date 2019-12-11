@@ -140,12 +140,12 @@ void kolko_pozycja(int z)
 
 int main()
 {
+    srand(time(NULL));
     bool gra = true;
     while (gra == true)
     {
         cout << "\x1b[2;1H";
         cout << "\x1b[0J";
-        srand(time(NULL));
 
         cout << "                    \x1b[107m \x1b[0m                  \x1b[107m \x1b[0m                    " << endl;
         cout << "          *         \x1b[107m \x1b[0m       *****      \x1b[107m \x1b[0m      *******       " << endl;
