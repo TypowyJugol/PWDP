@@ -6,16 +6,18 @@ using namespace std;
 int main()
 {
     int keyonoff = 1;
-    const float szerokosc=800, wysokosc=600, promien=100;
-    float xkola=szerokosc/2, ykola=wysokosc/2;
-    float vx=1, vy=1;
+    const float szerokosc=800, wysokosc=600, promien=100, N=3;
+    float xkola[3]={250,350,450}, ykola[3]={250,350,450};
+    float vx[3]={0.5,0.3,0.8}, vy[3]={0.5,0.3,0.8};
 
     sf::RenderWindow window(sf::VideoMode(szerokosc, wysokosc), "Nasze okno");
     sf::CircleShape shape;
     sf::Text text;
+    for (int i=0;i<N;i++){
     shape.setFillColor(sf::Color::Red);
     shape.setRadius(promien);
-    shape.setPosition(xkola-promien, ykola-promien);
+    shape.setPosition(xkola[i]-promien, ykola[i]-promien);
+    }
     while (window.isOpen())
     {
         // dopoki okno jest otwarte...
@@ -34,36 +36,27 @@ int main()
             if (event.key.code == sf::Keyboard::Escape)
                 window.close();
             
-            /*if (event.key.code == sf::Keyboard::Space){
-                shape.move(vx, vy);
-                xkola+=vx;
-                ykola+=vy;
-                if ((xkola+promien)>szerokosc || (xkola-promien)<0){
-                    vx=-vx;
-                }
-                if ((ykola+promien)>wysokosc || (ykola-promien)<0){
-                    vy=-vy;
-                }
-            }*/
+            
+            
         }
-        for (int i=0; i<100; i++){
-            shape.move(vx, vy);
-            xkola+=vx;
-            ykola+=vy;
-            if ((xkola+promien)>szerokosc || (xkola-promien)<0){
-                vx=-vx;
+        for(int i=0;i<N;i++){
+        shape.move(vx[i], vy[i]);
+            xkola[i]+=vx[i];
+            ykola[i]+=vy[i];
+            if ((xkola[i]+promien)>szerokosc || (xkola[i]-promien)<0){
+                vx[i]=-vx[i];
             }
-            if ((ykola+promien)>wysokosc || (ykola-promien)<0){
-                vy=-vy;
+            if ((ykola[i]+promien)>wysokosc || (ykola[i]-promien)<0){
+                vy[i]=-vy[i];
             }
-            usleep(1000);
         }
         // czyszczenie (na czarno)
         window.clear(sf::Color::Black);
         // rysuj kolo w zaleznosci od stanu zmiennej keyonoff
-        if (keyonoff)
+        //if (keyonoff)
             window.draw(shape);
         window.display();
+
     }
     return 0;
 }
