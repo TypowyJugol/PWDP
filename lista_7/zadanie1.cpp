@@ -8,7 +8,7 @@ int main()
     int keyonoff = 1;
     const float szerokosc = 800, wysokosc = 600, promien = 50, N = 3;
     float xkola[3] = {250, 350, 300}, ykola[3] = {250, 350, 300};
-    float vx[3] = {0.21, 0.34, 0.64}, vy[3] = {0.21, 0.34, 0.64}, dt = 0.9999999;
+    float vx[3] = {0.21, 0.34, 0.64}, vy[3] = {0.21, 0.34, 0.64}, dt = 0.2222222;
 
     sf::RenderWindow window(sf::VideoMode(szerokosc, wysokosc), "Nasze okno");
     std::vector<sf::CircleShape> shapes(N);
